@@ -1,8 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
+    <script>
+        const savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            document.documentElement.setAttribute("data-theme", savedTheme);
+        }
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zefender | Advanced Helmet Vending Machine</title>
     <!-- Fonts -->
@@ -54,7 +60,7 @@
 
         <div class="hero-content reveal">
 
-            <h1>Advanced Helmet Cleaning <span class="gradient-text">Technology</span></h1>
+            <h1>Advanced Helmet Vending <span class="gradient-text">Machine</span></h1>
 
             <div class="hero-buttons">
                 <a href="#process" class="btn btn-primary btn-lg">Watch Process <i class="ph ph-play-circle"></i></a>
@@ -151,7 +157,7 @@
                 <div class="why-card glass-card reveal stagger-1">
                     <div class="icon-wrapper"><i class="ph ph-shield-plus"></i></div>
                     <h4>99.9% Germ Removal</h4>
-                    <p>Medical-grade sterilization for complete peace of mind.</p>
+                    <p>Medical-gradesterilization for complete peace of mind.</p>
                 </div>
                 <div class="why-card glass-card reveal stagger-2">
                     <div class="icon-wrapper"><i class="ph ph-timer"></i></div>
@@ -171,7 +177,53 @@
             </div>
         </div>
     </section>
+    <!-- Future Products -->
+    <section class="future-products section-padding">
 
+        <div class="container text-center reveal">
+            <h2 class="section-title">Future Products</h2>
+            <p class="section-subtitle">
+                Expanding the Zefender ecosystem with smart automated machines for everyday convenience.
+            </p>
+        </div>
+
+        <div class="container future-grid">
+
+            <!-- Product 1 -->
+            <div class="future-item">
+                <div class="future-image">
+                    <img src="https://i.pinimg.com/1200x/d1/2d/1d/d12d1db98c697a08c0b81a8603e3175e.jpg">
+                </div>
+
+                <div class="future-text">
+                    <h3>Protein Shake Vending Machine</h3>
+                    <p>
+                        A smart vending machine that prepares fresh protein shakes instantly.
+                        Users can select their preferred flavor, protein level, and nutrition mix,
+                        making it perfect for gyms, sports complexes, and fitness centers.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="future-item reverse">
+                <div class="future-image">
+                    <img src="https://i.pinimg.com/736x/11/e9/c1/11e9c10dc2e6995d94b8deb63125b536.jpg">
+                </div>
+
+                <div class="future-text">
+                    <h3>Automatic Zerox Machine</h3>
+                    <p>
+                        A fully automated photocopy machine designed for colleges, offices,
+                        and public spaces. Users can quickly scan, copy, or print documents
+                        without staff assistance using a simple touch interface.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
     <!-- Scroll-Driven Story Section (Replaces Technical Specifications) -->
     <section id="features" class="story-section section-padding">
         <div class="container text-center reveal">
@@ -231,31 +283,122 @@
     </section>
 
     <!-- Trusted Users Marquee -->
-    <section class="trusted-section section-padding">
-        <div class="container text-center reveal">
-            <p class="trusted-title">Trusted by Riders & Organizations Everywhere</p>
-        </div>
+    <div class="marquee-container reveal">
+        <div class="marquee-content">
 
-        <div class="marquee-container reveal">
-            <div class="marquee-content">
-                <!-- Repeated for seamless loop -->
-                <div class="marquee-item"><i class="ph ph-motorcycle"></i> MotoGP Teams</div>
-                <div class="marquee-item"><i class="ph ph-bicycle"></i> Tour de France</div>
-                <div class="marquee-item"><i class="ph ph-buildings"></i> City Rentals</div>
-                <div class="marquee-item"><i class="ph ph-storefront"></i> Premium Dealers</div>
-                <div class="marquee-item"><i class="ph ph-police-car"></i> Highway Patrols</div>
-                <div class="marquee-item"><i class="ph ph-shield-star"></i> Racing Academies</div>
-                <!-- Duplicate -->
-                <div class="marquee-item"><i class="ph ph-motorcycle"></i> MotoGP Teams</div>
-                <div class="marquee-item"><i class="ph ph-bicycle"></i> Tour de France</div>
-                <div class="marquee-item"><i class="ph ph-buildings"></i> City Rentals</div>
-                <div class="marquee-item"><i class="ph ph-storefront"></i> Premium Dealers</div>
-                <div class="marquee-item"><i class="ph ph-police-car"></i> Highway Patrols</div>
-                <div class="marquee-item"><i class="ph ph-shield-star"></i> Racing Academies</div>
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_lD4uEmlDjyQm5ck-CgF9XVPsE8wX9iznw&s"
+                    alt="Lulu Mall">
+                <span>Lulu Mall</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBBOOdHTxT755WVz0Tf7NBMF2Mxlh35jWzLQ&s"
+                    alt="TVS">
+                <span>TVS</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://maximl.com/wp-content/uploads/2023/04/IOCL-chooses-Maximl-for-digitalization-Banner-Image.png"
+                    alt="IOCL">
+                <span>IOCL</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShSfo_r1-F3RjOhFJ7j4ks0LxU3UiD1W8XgA&s"
+                    alt="RMZ">
+                <span>RMZ</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://images.seeklogo.com/logo-png/15/1/google-nexus-logo-png_seeklogo-158213.png"
+                    alt="Nexus Mall">
+                <span>Nexus Mall</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKwvCk-D2xMl3345os1CVkTDa_FsQarsb7Q&s"
+                    alt="DERBI">
+                <span>DERBI</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://www.rnsit.ac.in/wp-content/themes/rnsit/webp/section_type26_logo.webp" alt="RNSIT">
+                <span>RNSIT</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://dsu.edu.in/virtual-tour/images/thumbnail.png" alt="Dayananda Sagar University">
+                <span>Dayananda Sagar University</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://image.pitchbook.com/QP5lWsKlfZGoMWw2CLXOQSQO1mp1661850357585_200x200"
+                    alt="Nexus mall">
+                <span>Nexus mall</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMBv849LLVYaR14rPnOafXgwnjhSjW1iHpWQ&s"
+                    alt="GameFit Arena">
+                <span>GameFit Arena</span>
+            </div>
+
+
+
+
+            <!-- Duplicate -->
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSL_lD4uEmlDjyQm5ck-CgF9XVPsE8wX9iznw&s"
+                    alt="Lulu Mall">
+                <span>Lulu Mall</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBBOOdHTxT755WVz0Tf7NBMF2Mxlh35jWzLQ&s"
+                    alt="TVS">
+                <span>TVS</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://maximl.com/wp-content/uploads/2023/04/IOCL-chooses-Maximl-for-digitalization-Banner-Image.png"
+                    alt="IOCL">
+                <span>IOCL</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShSfo_r1-F3RjOhFJ7j4ks0LxU3UiD1W8XgA&s"
+                    alt="RMZ">
+                <span>RMZ</span>
+            </div>
+
+            <div class="marquee-item">
+                <img src="https://images.seeklogo.com/logo-png/15/1/google-nexus-logo-png_seeklogo-158213.png"
+                    alt="Nexus Mall">
+                <span>Nexus Mall</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHKwvCk-D2xMl3345os1CVkTDa_FsQarsb7Q&s"
+                    alt="DERBI">
+                <span>DERBI</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://www.rnsit.ac.in/wp-content/themes/rnsit/webp/section_type26_logo.webp" alt="RNSIT">
+                <span>RNSIT</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://dsu.edu.in/virtual-tour/images/thumbnail.png" alt="Dayananda Sagar University">
+                <span>Dayananda Sagar University</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://image.pitchbook.com/QP5lWsKlfZGoMWw2CLXOQSQO1mp1661850357585_200x200"
+                    alt="Nexus mall">
+                <span>Nexus mall</span>
+            </div>
+            <div class="marquee-item">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMBv849LLVYaR14rPnOafXgwnjhSjW1iHpWQ&s"
+                    alt="GameFit Arena">
+                <span>GameFit Arena</span>
             </div>
         </div>
+    </div>
 
-        <div class="blob trusted-blob"></div>
+    <div class="blob trusted-blob"></div>
     </section>
 
     <!-- Contact / Demo CTA -->
@@ -315,11 +458,11 @@
                 <h4>Get in Touch</h4>
                 <div class="contact-item">
                     <i class="ph ph-envelope-simple"></i>
-                    <span>hello@zefender.com</span>
+                    <span>zefender.india@gmail.com</span>
                 </div>
                 <div class="contact-item">
                     <i class="ph ph-phone"></i>
-                    <span>+1 (800) 123-4567</span>
+                    <span></span>
                 </div>
                 <div class="contact-item">
                     <i class="ph ph-map-pin"></i>
