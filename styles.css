@@ -1077,6 +1077,11 @@ ul {
     opacity: 0.1;
 }
 
+.marquee-item img {
+    height: 70px;
+    max-width: 120px;
+}
+
 /* CTA Section */
 .cta-box {
     padding: 4rem;
@@ -1480,4 +1485,18 @@ ul {
 .why-grid:has(.why-card:hover) .why-card:not(:hover) {
     transform: scale(0.96);
     opacity: 0.6;
+}
+
+/* Fix washed-out video in light theme */
+[data-theme="light"] .hero-overlay {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Keep dark theme as is (or add if missing) */
+[data-theme="dark"] .hero-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.trusted-section {
+    margin-bottom: -4rem;
 }
