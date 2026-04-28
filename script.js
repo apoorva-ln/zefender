@@ -148,3 +148,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 });
+// Variants reveal animation
+const variantBlocks = document.querySelectorAll('.variant-block');
+
+const variantObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = 1;
+            entry.target.style.transform = "translateY(0)";
+        }
+    });
+}, { threshold: 0.2 });
+
+variantBlocks.forEach(block => {
+    block.style.opacity = 0;
+    block.style.transform = "translateY(40px)";
+    block.style.transition = "all 0.8s ease";
+    variantObserver.observe(block);
+});
